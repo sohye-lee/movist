@@ -1,28 +1,28 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-   background: linear-gradient(
-       to bottom, 
-       rgba(0,0,0,0) 41%, 
-       rgba(0,0,0,0.65) 100%
-   );
-   background-image: 
-   url('${({image}) => image}');
-   background-size: cover;
-   background-position: center;
-   background-wrap: no-wrap;
-   height: 600px;
-   position: relative;
-   animation: animateMainImage 1s ease-in;
+    background: linear-gradient(
+        to bottom, 
+        rgba(0,0,0,0) 41%, 
+        rgba(0,0,0,0.65) 100%
+    );
+    background-image: 
+    url('${({image}) => image}');
+    background-size: cover;
+    background-position: center;
+    background-wrap: no-wrap;
+    height: 600px;
+    position: relative;
+    animation: animateMainImage 1s ease-in;
 
-   @keyframes animateMainImage {
-       from {
-           opacity: 0;
-       } 
-       to {
-           opacity: 1;
-       }
-   }
+    @keyframes animateMainImage {
+        from {
+            opacity: 0;
+        } 
+        to {
+            opacity: 1;
+        }
+    }
 
    
 `;
@@ -30,6 +30,7 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
    padding: 20px;
    max-width: var(--maxWidth);
+   margin: 0 auto;
    color: var(--white);
 `;
 

@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.5.3",
     "history": "^5.0.0",
+    "lite-server": "^2.5.4",
     "postcss": "^8.1.4",
     "postcss-import": "^13.0.0",
     "prop-types": "^15.7.2",
@@ -16,6 +17,7 @@
     "react-dom": "^17.0.1",
     "react-router-dom": "^6.0.0-beta.0",
     "react-scripts": "4.0.0",
+    "react-star-ratings": "^2.3.0",
     "reactstrap": "^8.7.0",
     "styled-components": "^5.2.1",
     "web-vitals": "^0.2.4"
@@ -45,5 +47,7 @@
     ]
   },
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/sohye-lee/movist.git",
+  "author": "Sophie Lee <sohyelee@gmail.com>"
 }
