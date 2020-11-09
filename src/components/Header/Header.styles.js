@@ -1,19 +1,22 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    background-color: var(--medGrey);
+    z-index: 100;
+    background-color: rgba(0,0,0,0);
     padding: 0 20px;
-
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
 `;
 
 export const Content = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: var(--maxWidth);
-    padding: 20px 0;
+    padding: 20px 50px;
     margin: 0 auto
-
 `;
 
 

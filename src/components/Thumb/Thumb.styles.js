@@ -4,11 +4,12 @@ export const Wrapper = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
-    transition: all 300ms ease-in;
+    transition: all 280ms ease-in;
+    border-radius: 10px;
 
     h3 {
         position: absolute;
-        bottom: 3%;
+        bottom: 4%;
         left: 15px;
         color: var(--white);
         font-weight: 300;
@@ -23,12 +24,11 @@ export const Wrapper = styled.div`
 
     div {
         position: absolute;
-        bottom: 2%;
-        left: 6px;
-        padding: 0;
+        bottom: 3%;
+        left: 5px;
         opacity: 0;
-        transition: all 600ms ease-in;
-
+        transition: all 550ms ease-in;
+        z-index: 100;
     }
 
     :hover {
@@ -41,6 +41,22 @@ export const Wrapper = styled.div`
         }
     }
 
+    :after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 10px;
+        background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0) 60%, rgba(0,0,0,8) 100%);
+        opacity: 0;
+        transition: all 600ms ease-in;
+    }
+
+    :hover::after {
+        opacity: 1;
+    }
 `;
 
 export const Image = styled.img`
@@ -54,9 +70,10 @@ export const Image = styled.img`
     animation: animateThumb 1s ease-in;
 
     :hover {
-        transform: scale(1.07);
+        transform: scale(1.05);
         box-shadow: 8px 8px 20px 0 rgba(0,0,0,.5);
     }
+
 
     @keyframes animateThumb {
         0% {

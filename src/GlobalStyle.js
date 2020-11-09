@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-
+import bg from './images/bg.jpg';
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -17,12 +17,13 @@ export const GlobalStyle = createGlobalStyle`
 
     * {
         box-sizing: border-box;
-        font-family: 'Ubuntu', sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
 
     body {
         margin: 0;
         padding: 0;
+        background: url(${bg}) fixed center top/cover no-repeat !important;
 
         h1 {
             font-size: 2.5rem;

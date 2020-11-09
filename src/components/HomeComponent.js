@@ -23,14 +23,18 @@ const Home = () => {
     console.log(state);
 
     if (error) return <div>Sorry, something went wrong.</div>
+    // const moviesWithImg = state.results.slice(0,20).filter(movie => !movie.backdrop_path === false);
+    const randomIndex = Math.floor(Math.random()*20);
+    
     return (
         <div>
-            {!searchTerm && state.results[0] &&
-            <MainImage 
-                image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.results[0].backdrop_path}`}
-                title={state.results[0].original_title}
-                text={state.results[0].overview}
-            />
+            {!searchTerm && state.results[randomIndex] &&
+                <MainImage 
+                    image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.results[randomIndex].backdrop_path}`}
+                    title={state.results[randomIndex].original_title}
+                    text={state.results[randomIndex].overview}
+                    movieId={state.results[randomIndex].id}
+                />
             }
             <Searchbar setSearchTerm={setSearchTerm} />
 
