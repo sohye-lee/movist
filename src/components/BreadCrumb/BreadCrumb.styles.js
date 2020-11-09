@@ -11,7 +11,11 @@ export const Wrapper = styled.div`
     z-index: 3;
 
     @media screen and (max-width: 768px) {
-        padding-left: 30px;
+        padding-left: 50px;
+    }
+
+    @media all and (max-width: 400px) {
+        padding: 80px 0 0 60px;
     }
 `;
 
@@ -34,4 +38,11 @@ export const Content = styled.div`
     & .movieTitle {
         font-style: oblique;
     }
+
+    @media all and (max-width: 414px) {
+        span {
+            font-size: 0.9rem;
+        }
+    }
+
 `;

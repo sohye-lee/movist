@@ -120,13 +120,16 @@ export const Text = styled.div`
 
 
     .plot {
-        max-height: 200px;
-        white-space: wrap;
+        max-height: 150px;
+        // white-space: wrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
     @media screen and (max-width: 1200px) {
+        .plot {
+            max-height: 120px;
+        }
         .directorList {
             display: flex;
             max-width: 100%;
@@ -138,6 +141,28 @@ export const Text = styled.div`
             padding: 0;
             margin: 10px;
         }
+    }
+
+    @media all and (max-width: 414px) {
+
+        padding: 15px;
+
+        h1 {
+            font-size: 1.6em;
+        }
+
+        h2 {
+            font-size: 1.3em;
+        }
+
+        h3 {
+            font-size: 1.2em;
+        }
+        .plot {
+            max-height: 80px;
+            font-size: .9em;
+        }
+
     }
 `;
 
